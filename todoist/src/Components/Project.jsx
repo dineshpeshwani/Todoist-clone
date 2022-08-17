@@ -1,9 +1,11 @@
+// import { Spinner } from '@chakra-ui/react';
 import React, { Component } from 'react';
 import {getprojects, addProject, getProjectById, deleteProject} from "../ApiCall"
 
 class Projects extends Component {
     state = {
         projects : [], 
+        loader: true
       }
     
       componentDidMount(){
@@ -11,13 +13,14 @@ class Projects extends Component {
         .then((res)=>
           this.setState({
             projects: res,
+            loader: false
           })
         )
         }
     
         handleDelete =   async (e, val) => 
         { 
-          // e.preventDefault()
+        //   e.preventDefault()
          await deleteProject(val)
           let newList  = this.state.projects.filter((newList) => {
             if(newList.id !== val){

@@ -22,7 +22,7 @@ export function getProjectById() {
 
 
 export function deleteProject(id)
-{
+{   
     api.deleteProject(id)
     .then((isSuccess) => console.log(isSuccess))
     .catch((error) => console.log(error))
