@@ -8,9 +8,9 @@ export function getprojects() {
     .catch((error) => console.log(error));
 }
 
-export function addProject() { 
-     api.addProject({ name: 'Shopping List' })
-        .then((project) => console.log(project))
+export function addProject(name) { 
+    return  api.addProject({ name: name })
+        .then((project) => (project))
         .catch((error) => console.log(error))
     }
 
@@ -27,3 +27,22 @@ export function deleteProject(id)
     .then((isSuccess) => console.log(isSuccess))
     .catch((error) => console.log(error))
 }
+
+export function getTasks(){
+  return api.getTasks()
+    .then((tasks) => (tasks))
+    .catch((error) => console.log(error))
+}
+
+export function addTask (val ,id) {
+   return  api.addTask({ content: val, projectId: id })
+    .then((task) => (task))
+    .catch((error) => console.log(error))
+}
+
+export function deleteTask (val) {
+    api.deleteTask(val)
+        .then((isSuccess) => console.log(isSuccess))
+        .catch((error) => console.log(error))
+}
+

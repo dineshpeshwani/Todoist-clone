@@ -1,5 +1,29 @@
+*{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
 .searchbar-icon{
     padding-left: 25px;
     background: url("https://res.cloudinary.com/dct4net75/image/upload/v1660734090/search-9-24_uv4x81.png") no-repeat left;
     background-size: 20px;
+}
+
+.AccordianButton{
+    background: none;
+    border: 0;
+}
+
+.sidebar-icons:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.projectAccordian:hover{
+    background: transparent;
+    border: 0;
+}
+
+.accordianBar{
+    border-top: transparent;
+    margin-top: 2rem;
+    border-bottom: transparent;
 }
